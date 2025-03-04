@@ -42,3 +42,15 @@ src
         ├── services
         └── hooks
 ```
+
+To automate this even further, add this to your .zshrc
+
+```
+alias newreact='function _newreact() { cd ~/Desktop/Projects && git clone https://github.com/whygauravvv/react-starter "$1" && cd "$1" && rm -rf .git && git init && code .; }; _newreact'
+```
+
+and to run it just use
+
+```
+newreact {project name}
+```
